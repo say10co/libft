@@ -7,7 +7,12 @@
 #include <unistd.h>
 int main(void)
 {
-	
+	//ft_memcmp()
+	int arr[] = {1, 2, 3};
+	int arr1[] = {1, 2, 3};
+	ft_
+
+
 	//ft_strstr() OK.	
 	/*
 	char str[] = "come for cum";
