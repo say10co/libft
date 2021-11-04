@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:56:58 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/03 16:43:06 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/04 14:12:46 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -33,4 +33,7 @@ int		ft_atoi(const char *str);
 void	*ft_memmove(void *dst, const void *src, unsigned int len);
 char	*ft_strdup(const char *s1);
 void	*ft_calloc(unsigned int count, unsigned int size);
+char	*ft_substr(char const *s, unsigned int start,unsigned int len);
+char 	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char *str, char c);
 #endif 
