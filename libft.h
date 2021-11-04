@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:56:58 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/04 14:12:46 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/04 18:52:13 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -36,4 +36,7 @@ void	*ft_calloc(unsigned int count, unsigned int size);
 char	*ft_substr(char const *s, unsigned int start,unsigned int len);
 char 	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char *str, char c);
+char 	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char 	*ft_itoa(int n);
+void	ft_striteri(char *s, void (*f)(unsigned int,  char*));
 #endif 

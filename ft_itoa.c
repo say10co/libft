@@ -1,71 +1,87 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/04 17:41:06 by adriouic          #+#    #+#             */
+/*   Updated: 2021/11/04 21:07:05 by adriouic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include <stdlib.h>
-
-int		nbr_len(int nbr)
+#include <stdio.h>
+static int	ft_size(int nbr)
 {
-	int i;
+	int	size;
 
-	i = 1;
+	size = 1;
 	if (nbr < 0)
 	{
-		i++;
+		size++;
 		nbr *= -1;
 	}
 	while (nbr > 9)
 	{
 		nbr /= 10;
-		i++;
+		size++;
 	}
-	return (i);
+	return (size);
 }
 
-int		ft_div(int len)
+static int	ft_Q(unsigned int size)
 {
-	int i;
+	int	i;
 
 	i = 1;
-	if (len == 1)
-		return (1);
-	while (len > 1)
+	if (size == 1)
+		return (size);
+	while (size > 1)
 	{
 		i *= 10;
-		len--;
+		size--;
 	}
 	return (i);
 }
-#include<stdio.h>
-char	*ft_itoa(int nbr)
+static char	*edge_case(void)
 {
-	int i;
-	int len;
-	int len2;
 	char *result;
 
-	i = 0;
-	len = nbr_len(nbr);
-	len2 = len;
-	if ((result = (char*)malloc(sizeof(char) * (len + 1))) == NULL)
-		return (NULL);
-	if (nbr == -2147483648)
-		return ("-2147483648\0");
+	result = (char *)malloc(sizeof(char) * 12);
+	return (result = "-2147483648");
+}
 
-	if (nbr < 0)
-	{
+char	*ft_itoa(int nbr)
+{	
+	int		size;
+	int		index;
+	char	*result;
+
+	if (nbr == -2147483648)
+		return (edge_case());
+	size = ft_size(nbr);
+	index = 0;
+	result = (char *)malloc(sizeof(char) * (size + 1));
+	if (!result)
+		return (0);
+	if (nbr < 0 && ++index)
+	{	
 		nbr *= -1;
+		size--;
 		result[0] = '-';
-		i++;
-		len--;
 	}
-	while (i < len2)
+	while (size)
 	{
-		printf("%c", ((nbr / ft_div(len)) % 10) + 48);
-		result[i] = ((nbr / ft_div(len)) % 10) + 48;
-		len--;
-		i++;
+		result[index] = ((nbr / ft_Q(size) % 10) + '0');
+		size--;
+		index++;
 	}
-	result[i] = '\0';
+	result[index] = '\0';
 	return (result);
 }
-int main()
+
+int	main(void)
 {
-	ft_itoa(10);
+	printf("%s", ft_itoa(1231));
+	return (0);
 }
