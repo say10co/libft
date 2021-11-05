@@ -5,8 +5,8 @@
 #include <string.h>
 int main(int ac , char **arv){
 	(void)(ac);
-
-	
+	(void)(arv);
+/*	
 	printf("is ascii %d\n",ft_isascii(-46));//arv[1][0]));
 	printf("is alnum %d\n", ft_isalnum(arv[1][0]));
 	printf("is digit %d\n",ft_isdigit(arv[1][0]));
@@ -36,16 +36,20 @@ int main(int ac , char **arv){
 	char s[] = "come for cum";
 	printf("fount at pos %ld\n", (char *)memchr(s, 129, 13)-s+1);
 	printf("%d\n", memcmp("abc", "abc", 5));
-
-	int arr1[] = {1, 2};
-	int arr2[] = {1, 2};
-	int res = memcmp(arr1, arr2, 3* sizeof(int));
-	int	resft = ft_memcmp(arr1, arr2, 3* sizeof(int));
+*/
+	//int arr1[] = {1, 2};
+	//int arr2[] = {1, 2};
+	//int res = memcmp(arr1, arr2, 3* sizeof(int));
+	//int	resft = ft_memcmp(arr1, arr2, 3* sizeof(int));
+	char arr1[] = "133";
+	char arr2[] = "123";
+	int res = memcmp(arr1, arr2, 3* sizeof(char));
+	int	resft = ft_memcmp(arr1, arr2, 3* sizeof(char));
 	if (!res)
 		printf("non-ft: %d ft: %d arrys are iddentical\n", res,  resft);
 	else
 		printf("non-ft: %d ft: %d arrays are not\n", res, resft);;
-
+/*
 	char *hysack = "future is loading";
 	char *needle = "ft";
 	
@@ -55,5 +59,5 @@ int main(int ac , char **arv){
 
 	char * testcpy = "1234567890";
 	printf("%s\n", strdup(testcpy));
-	printf("%s\n", ft_strdup(testcpy));
+	printf("%s\n", ft_strdup(testcpy));*/
 }	

@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:18:47 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/03 20:29:48 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/05 21:46:47 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_memcmp(const void *str1, const void *str2, unsigned int n)
 	while (n--)
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		ureturn (s1[i] - s2[i]);
 		i++;
 	}
 	return (0);

@@ -6,11 +6,9 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:20:42 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/02 09:42:09 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/05 11:57:16 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-typedef unsigned long	t_size;
-
 void	ft_bzero(void *s, t_size n)
 {
 	unsigned char	*str;

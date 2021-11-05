@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/04 19:48:13 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/05 11:51:02 by adriouic         ###   ########.fr       */
+/*   Created: 2021/11/05 12:45:25 by adriouic          #+#    #+#             */
+/*   Updated: 2021/11/05 12:47:46 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-//#include <fcntl.h>
-void	ft_putnbr_fd(int n, int fd)
+#include "libft.h"
+#include <stdio.h>
+t_list *ft_lstlast(t_list *lst)
 {
-	char	t;
+	t_list	*curr;
 
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		if (n == -2147483648)
-			write(fd, "2147483647", 10);
-		else
-			n *= -1;
-	}
-	if (n > 9)
-		ft_putnbr_fd(n / 10, fd);
-	t = (n % 10) + '0';
-	write(fd, &t, 1);
+	curr = lst;
+	while (curr->next)
+		curr = curr->next;
+	return (curr);
+
 }
 /*
 int main()
 {
-	int fd = open("tdr.txt", O_WRONLY | O_APPEND);
-	ft_putnbr_fd(123, fd);
+	t_list *root;
+	root = ft_lstnew("b");
+	root->next = ft_lstnew("c");
+	root->next->next = ft_lstnew("d");
+	printf("%s\n", (ft_lstlast(root))->content);
 }
 */

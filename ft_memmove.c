@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:51:05 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/03 21:34:25 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/05 19:52:39 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <string.h>
@@ -40,8 +40,8 @@ int main()
 {
 	char s1[] = "sss34567";	
 	char s2[] = "sss34567";
-	printf("%s\n", ft_memmove(s1+3, s1, 5));
-	printf("%s\n", memmove(s2+3, s2, 5));
+	printf("%s\n", ft_memmove(s1, s1+3, 5));
+	printf("%s\n", memmove(s2, s2+3, 5));
 	return 0;
 }
 
