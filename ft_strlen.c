@@ -6,10 +6,12 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:29:53 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/02 14:00:08 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 13:17:35 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_strlen(char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 

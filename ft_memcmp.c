@@ -6,14 +6,11 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 19:18:47 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/05 21:46:47 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 15:13:31 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <string.h>
-
-int	ft_memcmp(const void *str1, const void *str2, unsigned int n)
+#include "libft.h"
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	unsigned char	*s1;
 	unsigned char	*s2;

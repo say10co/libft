@@ -6,12 +6,12 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:45:06 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/01 17:45:25 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 12:49:26 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isprint(unsigned char c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
-}
+} 

@@ -6,15 +6,16 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:20:42 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/05 11:57:16 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 13:43:53 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-void	ft_bzero(void *s, t_size n)
-{
-	unsigned char	*str;
 
-	str = s;
+void	ft_bzero(void *s, size_t n)
+{
+	char	*str;
+
+	str = (char *)s;
 	while (n > 0)
 	{
 		*str = 0;

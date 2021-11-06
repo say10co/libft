@@ -6,10 +6,10 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:31:11 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/03 13:39:21 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 14:54:30 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-unsigned int	ft_strlcpy(char *dst, char *src, unsigned int size)
+size_t ft_strlcpy(char *dst, char *src, size_t size)
 {
 	int	index;
 	int	len;

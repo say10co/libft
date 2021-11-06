@@ -6,11 +6,10 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:41:06 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/04 21:07:05 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 15:38:49 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <stdio.h>
+
 static int	ft_size(int nbr)
 {
 	int	size;
@@ -45,10 +44,20 @@ static int	ft_Q(unsigned int size)
 }
 static char	*edge_case(void)
 {
-	char *result;
+	char	*result;
+	char	*str;
+	int		i;
 
+	i = 0;
+	str = "-2147483648";
 	result = (char *)malloc(sizeof(char) * 12);
-	return (result = "-2147483648");
+	while (i < 11)
+	{
+		result[i] = str[i];
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }
 
 char	*ft_itoa(int nbr)
@@ -78,10 +87,4 @@ char	*ft_itoa(int nbr)
 	}
 	result[index] = '\0';
 	return (result);
-}
-
-int	main(void)
-{
-	printf("%s", ft_itoa(1231));
-	return (0);
 }

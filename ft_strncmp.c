@@ -6,12 +6,12 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:47:10 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/03 13:42:53 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 15:09:57 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	index;
+	size_t	index;
 
 	index = 0;
 	while (s1[index] != '\0' && s2[index] != '\0' && index < n)

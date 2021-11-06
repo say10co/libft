@@ -6,10 +6,10 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:57:08 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/02 15:57:31 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 15:01:02 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_toupper(unsigned char c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);

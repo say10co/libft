@@ -5,12 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 10:51:05 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/05 19:52:39 by adriouic         ###   ########.fr       */
+/*   Created: 2021/11/06 14:08:22 by adriouic          #+#    #+#             */
+/*   Updated: 2021/11/06 14:51:10 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <string.h>
-void	*ft_memmove(void *dst, const void *src, unsigned int len)
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*t_dst;
 	unsigned char	*t_src;
@@ -18,30 +19,18 @@ void	*ft_memmove(void *dst, const void *src, unsigned int len)
 
 	t_dst = (unsigned char *)dst;
 	t_src = (unsigned char *)src;
-
 	leader = 1;
 	if (t_dst > t_src)
 	{
-		t_src = t_src + len -1;
-		t_dst = t_dst + len -1;
+		t_src = t_src + len - 1;
+		t_dst = t_dst + len - 1;
 		leader = -1;
 	}
 	while (len--)
 	{
 		*t_dst = *t_src;
 		t_src += leader;
-		t_dst += leader;		
+		t_dst += leader;
 	}
 	return (dst);
 }
-
-/*
-int main()
-{
-	char s1[] = "sss34567";	
-	char s2[] = "sss34567";
-	printf("%s\n", ft_memmove(s1, s1+3, 5));
-	printf("%s\n", memmove(s2, s2+3, 5));
-	return 0;
-}
-*/

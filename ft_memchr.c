@@ -6,10 +6,10 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:49:15 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/03 10:50:36 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 15:11:01 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-void	*ft_memchr(const void *s, int c, unsigned int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
 	int				i;

@@ -6,10 +6,10 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:43:11 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/03 19:52:03 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 15:14:46 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	*ft_strnstr(const char *haysack, const char *needle, unsigned int n)
+char	*ft_strnstr(const char *haysack, const char *needle, size_t n)
 {
 	int	i;
 	int	j;

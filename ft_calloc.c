@@ -1,5 +1,17 @@
-#include <stdlib.h>
-static void	*ft_memset(void *b, int c, unsigned int len)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/06 15:18:34 by adriouic          #+#    #+#             */
+/*   Updated: 2021/11/06 15:22:42 by adriouic         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
+
+static void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*str;
 
@@ -12,7 +24,8 @@ static void	*ft_memset(void *b, int c, unsigned int len)
 	}
 	return (b);
 }
-void	*ft_calloc(unsigned int count, unsigned int size)
+
+void	*ft_calloc(size_t count, size_t size)
 {
 	void *mem;
 	mem = malloc(count * size);

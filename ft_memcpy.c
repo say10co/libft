@@ -6,14 +6,12 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:59:37 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/03 15:53:25 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 14:05:49 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-#include <stdio.h>
-#include <string.h>
-
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	int		i;
 	char	*t_dest;
@@ -29,18 +27,4 @@ void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 		n--;
 	}
 	return (dest);
-}
-int main()
-{
-
-	char s[] = "abcdef";
-	char *d = s + 2;
-
-	printf("s => %s \n", s);
-	printf("d => %s \n", d);
-	memcpy(d, s, 3);
-	
-	printf("s => %s \n", s);
-	printf("d => %s \n", d);
-	return 0;
 }

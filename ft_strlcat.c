@@ -6,10 +6,11 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:21:32 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/03 13:27:09 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/06 14:58:23 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	len(char *str)
+#include "libft.h"
+static int	len(char *str)
 {
 	int	i;
 
@@ -19,7 +20,7 @@ int	len(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	unsigned int	d_len;
 	unsigned int	s_len;
