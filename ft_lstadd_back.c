@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
 static t_list *ft_lstlast(t_list *lst)
 {
 	t_list	*curr;

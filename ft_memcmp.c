@@ -25,7 +25,7 @@ int	ft_memcmp(const void *str1, const void *str2, unsigned int n)
 	while (n--)
 	{
 		if (s1[i] != s2[i])
-		ureturn (s1[i] - s2[i]);
+		return (s1[i] - s2[i]);
 		i++;
 	}
 	return (0);

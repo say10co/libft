@@ -48,7 +48,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *))
 		return (NULL);
 	curr_old = lst;
 	root = ft_lstnew1(f(lst->content));
-if (lst->data)
+if (lst->content)
 	free(lst);
 	curr_new = root;
 	while (curr_old)

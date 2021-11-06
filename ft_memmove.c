@@ -35,7 +35,7 @@ void	*ft_memmove(void *dst, const void *src, unsigned int len)
 	return (dst);
 }
 
-
+/*
 int main()
 {
 	char s1[] = "sss34567";	
@@ -44,4 +44,4 @@ int main()
 	printf("%s\n", memmove(s2, s2+3, 5));
 	return 0;
 }
-
+*/

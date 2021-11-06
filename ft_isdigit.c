@@ -9,7 +9,7 @@
 /*   Updated: 2021/11/01 17:08:46 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isdigit(unsigned char c)
+int	ft_isdigit(int c)
 {
 	char	*digits;
 	int		i;
