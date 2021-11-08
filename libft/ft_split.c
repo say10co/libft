@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:14:30 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/07 19:31:47 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:16:10 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -66,13 +66,11 @@ char	**ft_split(char *str, char c)
 	int		nb_words;
 	int		added_words;
 	int		length;
-	
-	if (!str)
-		return (0);
+
 	nb_words = ft_count_words(str, c);
 	result = (char **)malloc(sizeof(char *) * (nb_words + 1));
 	added_words = 0;
-	if (!result)
+	if (!result || !str)
 		return (NULL);
 	while (*str && added_words < nb_words)
 	{

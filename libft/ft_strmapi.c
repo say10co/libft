@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 18:31:47 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/07 19:28:58 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:18:01 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -26,7 +26,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		s_length;
 	int		i;
 	char	*result;
-	
+
 	if (!s)
 		return (0);
 	s_length = sft_strlen(s);

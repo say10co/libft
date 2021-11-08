@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 12:45:25 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/07 13:36:01 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:08:13 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,7 +14,7 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*curr;
-	
+
 	if (!lst)
 		return (lst);
 	curr = lst;

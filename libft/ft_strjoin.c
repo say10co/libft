@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 10:10:19 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/07 19:04:05 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:17:20 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -26,7 +26,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		index;
 	int		total_len;
 	char	*new_str;
-	
+
 	if (!s1 || !s2)
 		return (0);
 	total_len = sft_strlen(s1) + sft_strlen(s2);

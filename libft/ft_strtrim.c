@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:42:33 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/07 19:12:49 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/08 10:20:12 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -66,7 +66,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (end == -1)
 		strimed = (char *)malloc((sizeof(char)));
 	else
-		strimed = (char *)malloc((end - start ) * sizeof(char) + 2);
+		strimed = (char *)malloc((end - start) * sizeof(char) + 2);
 	if (!strimed)
 		return (NULL);
 	while (start <= end)
