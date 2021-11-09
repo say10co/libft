@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 09:57:21 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/08 19:43:46 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/09 14:14:46 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	index;
 	unsigned int	s_len;
 
+	if (!s)
+		return (0);
 	index = 0;
 	s_len = ft_strlen(s);
 	if (s_len < len)

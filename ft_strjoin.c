@@ -6,20 +6,10 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 10:10:19 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/08 10:17:20 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/09 14:05:11 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-static int	sft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -29,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (0);
-	total_len = sft_strlen(s1) + sft_strlen(s2);
+	total_len = ft_strlen(s1) + ft_strlen(s2);
 	index = 0;
 	new_str = (char *)malloc(sizeof(char) * total_len + 1);
 	if (!new_str)

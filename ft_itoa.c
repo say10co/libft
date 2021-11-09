@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:41:06 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/06 18:10:49 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/09 13:51:33 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -44,24 +44,6 @@ static int	ft_q(unsigned int size)
 	return (i);
 }
 
-static char	*edge_case(void)
-{
-	char	*result;
-	char	*str;
-	int		i;
-
-	i = 0;
-	str = "-2147483648";
-	result = (char *)malloc(sizeof(char) * 12);
-	while (i < 11)
-	{
-		result[i] = str[i];
-		i++;
-	}
-	result[i] = '\0';
-	return (result);
-}
-
 char	*ft_itoa(int nbr)
 {	
 	int		size;
@@ -69,7 +51,7 @@ char	*ft_itoa(int nbr)
 	char	*result;
 
 	if (nbr == -2147483648)
-		return (edge_case());
+		return (ft_strdup("-2147483648"));
 	size = ft_size(nbr);
 	index = 0;
 	result = (char *)malloc(sizeof(char) * (size + 1));
