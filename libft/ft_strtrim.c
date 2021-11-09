@@ -6,20 +6,10 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:42:33 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/08 10:20:12 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/09 10:57:07 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-static int	sft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 static int	finde_edges(const char *s1, const char *set, int len, int direct)
 {
@@ -59,7 +49,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (0);
-	len_s1 = sft_strlen(s1);
+	len_s1 = ft_strlen(s1);
 	start = finde_edges(s1, set, 0, 1);
 	end = finde_edges(s1, set, len_s1, -1);
 	len_s1 = 0;

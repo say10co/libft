@@ -6,29 +6,19 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:21:32 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/06 18:04:14 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/08 19:05:47 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static int	len(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned int	d_len;
 	unsigned int	s_len;
 	unsigned int	index;
 
-	d_len = len(dest);
-	s_len = len(src);
+	d_len = ft_strlen(dest);
+	s_len = ft_strlen(src);
 	index = d_len;
 	if (size == 0)
 		return (s_len);

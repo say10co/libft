@@ -6,11 +6,9 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:34:48 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/07 21:46:21 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/08 11:02:35 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <stdio.h>
 
 static int	ft_skip(const char **str)
 {
@@ -53,10 +51,4 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	return (result * sign);
-}
-
-int	main(void)
-{
-	printf("%d\n", ft_atoi("  99999999999999999999999999"));
-	printf("%d\n", atoi("  99999999999999999999999999"));
 }

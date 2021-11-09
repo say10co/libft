@@ -6,20 +6,12 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 09:20:42 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/06 13:43:53 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/08 11:37:04 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
-{
-	char	*str;
-
-	str = (char *)s;
-	while (n > 0)
-	{
-		*str = 0;
-		str++;
-		n--;
-	}
+{	
+	ft_memset(s, 0, n);
 }

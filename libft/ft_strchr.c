@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:32:49 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/06 15:04:38 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/08 18:55:27 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 char	*ft_strchr(const char *str, int c)
@@ -18,11 +18,11 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return (&s[i]);
 		i++;
 	}
-	if (c == s[i])
+	if ((char)c == s[i])
 		return (&s[i]);
 	return (0);
 }

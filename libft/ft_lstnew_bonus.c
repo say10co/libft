@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 16:22:56 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/06 18:32:42 by adriouic         ###   ########.fr       */
+/*   Created: 2021/11/06 18:40:49 by adriouic          #+#    #+#             */
+/*   Updated: 2021/11/08 18:23:22 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static void	sft_lstdelone(t_list *lst, void (*del)(void*))
+t_list	*ft_lstnew(void *content)
 {
-	del(lst->content);
-	free(lst);
-	lst = NULL;
-}
+	t_list	*new_elem;
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
-{
-	t_list	*next_node;
-	t_list	*curr;
-
-	curr = (*lst)->next;
-	sft_lstdelone(*lst, del);
-	*lst = NULL;
-	while (curr)
-	{
-		next_node = curr->next;
-		sft_lstdelone(curr, del);
-		curr = next_node;
-	}
+	new_elem = (t_list *)malloc(sizeof(t_list));
+	if (!new_elem)
+		return (NULL);
+	new_elem->content = content;
+	new_elem->next = NULL;
+	return (new_elem);
 }
