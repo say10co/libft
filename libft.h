@@ -6,17 +6,14 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:56:58 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/09 14:19:13 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/09 20:42:48 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
+# define LIBFT_H
 
 # include <unistd.h>
 # include <stdlib.h>
-
-# define LIBFT_H
-
-# define SIZE_T unsigned int
 
 typedef struct s_list
 {
@@ -25,6 +22,7 @@ typedef struct s_list
 }t_list;
 
 // PART1
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -75,4 +73,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
 #endif 
