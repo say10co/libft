@@ -18,7 +18,7 @@ FLAGS		=	-Wall -Werror -Wextra
 
 all: $(NAME)
 
-.c.o:
+%.o: %.c
 	cc $(FLAGS) -c $< -o  ${<:.c=.o}
 	ar rcs $(NAME) ${<:.c=.o}
 
