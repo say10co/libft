@@ -6,19 +6,19 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/06 14:08:22 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/08 11:45:59 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/11 16:35:54 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*t_dst;
-	unsigned char	*t_src;
-	int				leader;
+	char	*t_dst;
+	char	*t_src;
+	int		leader;
 
-	t_dst = (unsigned char *)dst;
-	t_src = (unsigned char *)src;
+	t_dst = (char *)dst;
+	t_src = (char *)src;
 	if (!dst && !src)
 		return (dst);
 	leader = 1;

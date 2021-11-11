@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:31:11 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/08 18:59:05 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/10 21:36:54 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,9 +16,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	index;
 	int		len;
 
-	len = 0;
-	while (src[len])
-		len++;
+	len = ft_strlen(src);
 	if (size == 0)
 		return (len);
 	index = 0;
