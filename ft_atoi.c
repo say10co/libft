@@ -6,11 +6,9 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:34:48 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/11 16:33:26 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:56:09 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <limits.h>
-
 static int	ft_skip(const char **str)
 {
 	int	sign;
@@ -40,7 +38,7 @@ int	ft_atoi(const char *str)
 		if (*str >= 48 && *str <= 57)
 		{	
 			result = result * 10 + (*str - '0');
-			if (result > LONG_MAX)
+			if (result > 9223372036854775807)
 			{
 				if (sign == 1)
 					return (-1);
