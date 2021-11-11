@@ -6,7 +6,7 @@
 /*   By: adriouic <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 12:42:33 by adriouic          #+#    #+#             */
-/*   Updated: 2021/11/09 11:39:39 by adriouic         ###   ########.fr       */
+/*   Updated: 2021/11/11 18:43:06 by adriouic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -20,7 +20,7 @@ static int	finde_edges(const char *s1, const char *set, int len, int direct)
 	index_s1 = 0;
 	if (direct < 0)
 		index_s1 = len - 1;
-	while (s1[index_s1] && index_s1 >= 0)
+	while (index_s1 >= 0 && s1[index_s1] && index_s1 >= 0)
 	{
 		index_set = 0;
 		flag = 1;
@@ -47,10 +47,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*strimed;
 
-	if (!s1 || !set)
+	if (!s1)
 		return (0);
 	len_s1 = ft_strlen(s1);
-	start = finde_edges(s1, set, 0, 1);
+	start = finde_edges(s1, set, len_s1, 1);
 	end = finde_edges(s1, set, len_s1, -1);
 	len_s1 = 0;
 	if (end == -1)
